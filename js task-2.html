@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java script task - 2</title>
+    <script>
+       function reverse()
+       {
+        let x= document.getElementById('inp').value;
+        let reversed = x.split('').reverse().join('');
+       document.getElementById('num').value=reversed;
+       }
+
+    </script>
+</head>
+<body>
+    <h1>Java script program to reverse the String</h1>
+    <form action="">
+        <label for="">Enter the Number :</label>
+        <input type="text" id="inp"><br><br>
+        <label for="">Output is</label>
+        <input type="text" id="num" readonly><br><br>
+        <input type="button" value="reverse" onclick="reverse()">
+    </form>
+</body>
+</html>
+
+   

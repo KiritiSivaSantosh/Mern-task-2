@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>java script task - 8</title>
+    <style>
+        div{
+           
+            flex-direction: column;
+            background: radial-gradient(circle at 5.3% 18.2%, rgb(255, 208, 253) 0%, rgb(255, 237, 216) 90%);
+             width: max-content;
+              margin: auto;
+              padding: 25px;
+           
+        }
+        table{
+            margin-left: 0%;
+        }
+     h1{
+            color: blue;
+            font-weight: 300;
+            text-align: center;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="number"],
+        input[type="tel"]{
+                     width: 98%;
+        }
+        #l{
+            text-align: right;
+        }
+        #reg
+        {
+            margin-left: 48%;
+        }
+        input[type=button]
+        {
+            border: 2px solid black;
+            border-radius: 20px 20px 20px 20px;
+            color: white;
+            background-color: red;
+        }
+        p{
+            color: red;
+            margin-left: 10px;
+        }
+
+    </style>
+    <script>
+        function checkStrength()
+        {
+            let n=document.getElementsByName('fname')[0].value;
+            let l=document.getElementsByName('lname')[0].value;
+            let m=document.getElementsByName('mail')[0].value;
+            let p=document.getElementsByName('pass')[0].value;
+            let rp=document.getElementsByName('rp')[0].value;
+            let age=document.getElementsByName('age')[0].value;
+            let phn=document.getElementsByName('phn')[0].value;
+            let ads=document.getElementsByName('ads')[0].value;
+            let st=document.getElementsByName('state')[0].value;
+            if (n.length===0)
+            {
+                document.getElementById("fname").innerHTML="poor"
+
+            }
+            else if (n.length < 5)
+            {
+                document.getElementById("fname").innerHTML="weak"
+
+            }
+            else{
+                document.getElementById("fname").innerHTML="strong"
+
+            }
+            // --------------------------
+            if (l.length===0)
+            {
+                document.getElementById("lname").innerHTML="POOR"
+
+            }
+            else if (l.length < 5)
+            {
+                document.getElementById("lname").innerHTML="weak"
+
+            }
+            else{
+                document.getElementById("lname").innerHTML="strong"
+
+            }
+            // ---
+            if (m.length===0)
+            {
+                document.getElementById("m").innerHTML="POOR"
+
+            }
+            else if (m.length < 5)
+            {
+                document.getElementById("m").innerHTML="weak"
+
+            }
+            else{
+                document.getElementById("m").innerHTML="strong"
+
+            }
+            // ---
+            if (p.length===0)
+            {
+                document.getElementById("p").innerHTML="POOR"
+
+            }
+            else if (p.length < 5)
+            {
+                document.getElementById("p").innerHTML="weak"
+
+            }
+            else{
+                document.getElementById("p").innerHTML="strong"
+
+            }
+            //-----
+            if (rp.length===0 || rp!=p)
+            {
+                document.getElementById("rp").innerHTML="POOR or mismatch"
+
+            }
+            else if (rp.length < 5)
+            {
+                document.getElementById("rp").innerHTML="weak"
+
+            }
+            else{
+                document.getElementById("rp").innerHTML="strong"
+
+            }
+            //----
+            if (age.length===0)
+            {
+                document.getElementById("age").innerHTML="POOR"
+
+            }
+            else if (age.length < 5)
+            {
+                document.getElementById("age").innerHTML="weak"
+
+            }
+            else{
+                document.getElementById("age").innerHTML="strong"
+
+            }
+            //--
+            if (phn.length===0)
+            {
+                document.getElementById("phn").innerHTML="POOR"
+
+            }
+            else if (phn.length < 5)
+            {
+                document.getElementById("phn").innerHTML="weak"
+
+            }
+            else{
+                document.getElementById("phn").innerHTML="strong"
+
+            }
+            //----
+            if (ads.length===0)
+            {
+                document.getElementById("ads").innerHTML="POOR"
+
+            }
+            else if (ads.length < 5)
+            {
+                document.getElementById("ads").innerHTML="weak"
+
+            }
+            else{
+                document.getElementById("ads").innerHTML="strong"
+
+            }
+            //----
+            if (st.length===0)
+            {
+                document.getElementById("state").innerHTML="POOR"
+
+            }
+            else if (st.length < 5)
+            {
+                document.getElementById("state").innerHTML="weak"
+
+            }
+            else{
+                document.getElementById("state").innerHTML="strong"
+
+            }
+        }
+    </script>
+    
+    
+</head>
+<body>
+    <div>
+        <h1>Registration form</h1>
+    <form onkeyup="checkStrength()">
+    <table >
+
+        <tr>
+            <td>
+                <label for="fname">First Name </label>
+            </td>
+            <td>
+                <input type="text" name="fname">
+            </td>
+            <td>
+                <p id="fname"></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="lname">Last Name </label>
+            </td>
+            <td>
+                <input type="text" name="lname" id="">
+            </td>
+            <td>
+               <p id="lname"></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="mail">Email</label>
+            </td>
+            <td>
+                <input type="email" name="mail">
+            </td>
+            <td>
+                <p id="m"></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="Password">Password</label>
+            </td>
+            <td>
+                <input type="password" name="pass">
+            </td>
+            <td>
+                <p id="p"></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="Password">Re-enter Password</label>
+            </td>
+            <td>
+                <input type="password" name="rp">
+            </td>
+            <td>
+                <p id="rp"></p>
+            </td>
+        </tr>
+        <tr >
+            <td rowspan="2">
+                <label for="Gender">Gender :</label>
+            </td>
+            <td>
+                <input type="radio" name="Gender" id="">Male
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="radio" name="Gender"> Female
+            </td>
+        </tr>
+        <tr>
+           <td>
+            <label for="age">Age :</label>
+           </td>
+           <td>
+            <input type="number" name="age" id="">
+           </td>
+           <td>
+            <p id="age"></p>
+           </td>
+        </tr>
+        <tr>
+            <td>
+             <label for="pn">Phone number :</label>
+            </td>
+            <td>
+             <input type="tel" name="phn" id="">
+            </td>
+            <td>
+                <p id="phn"></p>
+            </td>
+         </tr>
+         <tr>
+            <td>
+                <label for="ads">Address</label>
+            </td>
+            <td>
+                <textarea name="ads" id="" cols="35" rows="5"></textarea>
+            </td>
+            <td>
+                <p id="ads"></p>
+            </td>
+         </tr>
+         <tr>
+            <td>
+            <label for="state">State</label>
+            </td>
+            <td>
+                <input type="text" name="state">
+            </td>
+            <td>
+                <p id="state"></p>
+            </td>
+         </tr>
+         <tr>
+            <td>
+                <label for="con">Country</label>
+            </td>
+            <td>
+                <select name="con" id="" >
+                  <option value="">Choose your country</option>
+                    <option value="">America</option>
+                    <option value="">Australia</option>
+                    <option value="">canada</option>
+                    <option value="">India</option>
+                    <option value="">South africa</option>
+                    <option value="">Turkey</option>
+                </select>
+            </td>
+         </tr>
+         <tr>
+            <td>
+                <label for="lan">Languages Known</label>
+            </td>
+            <td>
+                <input type="checkbox"> English
+                <input type="checkbox">Kannada
+                <input type="checkbox">Hindi
+                <input type="checkbox">Telugu
+            </td>
+         </tr>
+         <tr>
+            <td colspan="2">
+            <input type="checkbox" name="dec">Hereby I declare all the given details are true
+            </td>
+         </tr>
+         <tr>
+           <td id="l" colspan="2">
+                login to <a href="#ethnus">Ethnus</a> website
+            </td>
+         </tr>   
+    </table> 
+    <br>
+    <input type="button" value="REGISTER" id="reg">
+</form>
+</div>
+</body>
+</html>

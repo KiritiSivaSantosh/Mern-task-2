@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Task - 6</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+        }
+        #container
+        {
+            height: 300px;
+            width: max-content;
+            padding: 15px;
+            margin: 15px;
+            border-radius: 4px;
+            display: flex;
+            flex-direction:column;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            background-color:rgb(237, 230, 222);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+           
+        }
+        
+        h3{
+            font-style: italic;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        
+        input[type=text], input[type=password] {
+            width: 115%;
+            margin: 0px;
+        }
+        input[type=button] {
+            width: 79%;
+           margin-right: 18px;
+           color: white;
+           background-color: blue;
+           height: 45px;
+           border-radius: 2px;
+
+        }
+
+        .row {
+            margin-bottom: 10px; 
+        }
+
+        .col-1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 25px;
+            padding-left: 25px;
+            font-size: 1.5rem; 
+           
+        }
+
+        .col-4 {
+            padding-left: 0;
+            padding-right: 0;
+            width: 55%;
+        }
+        #end
+        {
+            display: flex;
+            flex-direction: row;
+        }
+        a{
+            margin-left: 25px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div id="container">
+        <h3>Instagram</h3>
+        <div class="row">
+            <div class="col-1 bg-secondary text-center"><i class="fa-solid fa-user"></i></div>
+            <div class="col-4 bg-light"><input type="text" placeholder="Username"></div>
+        </div>
+        <div class="row">
+            <div class="col-1 bg-secondary text-center"><i class="fa-solid fa-lock"></i></div>
+            <div class="col-4 bg-light"><input type="password" placeholder="Password"></div>
+        </div>
+        
+        <input type="button" value="Login"><br>
+        <div id="end">
+        <input type="checkbox"><label for="">Remember me</label>
+        <a href="#aj">Forgot Password?</a></div>
+    </div>
+    <p>Don't have an account! <a href="#ab">Sign up here</a></p>
+</body>
+</html>

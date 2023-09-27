@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java script task - 4</title>
+    <style>
+        body
+        {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 55px;
+        }
+    </style>
+     <script>
+        function date() {
+            const currentDate = new Date();
+            const options = { day: 'numeric', month: 'long', year: 'numeric' };
+            const formattedDate = currentDate.toLocaleDateString('en-US', options);
+            document.getElementById('d').innerText = formattedDate;
+            }
+
+        function time() {
+            const currentDate = new Date();
+            const options = {
+                weekday: 'short',
+                year: 'numeric',
+                month: 'short',
+                day: '2-digit',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                timeZoneName: 'short'
+            };
+            const formattedTime = currentDate.toLocaleString('en-US', options);
+            document.getElementById('t').innerText =  formattedTime+"(India Standard Time)";
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="show date" onclick="date()"><br>
+    <h3 id="d"></h3><br><br>
+    <input type="button" value="show Time" onclick="time()"><br>
+    <h3 id="t"></h3>
+</body>
+</html>
